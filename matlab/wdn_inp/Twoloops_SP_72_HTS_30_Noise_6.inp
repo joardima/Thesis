@@ -1,0 +1,178 @@
+; Filename: D:/OneDrive/IHE_HI/015. Thesis/Github_repositories\Msc-Thesis/INP_FILES/Twoloops_Base_WNTR.inp
+; WNTR: 0.4.2
+; Created: 2023-03-07 09:38:11
+[TITLE]
+
+[JUNCTIONS]
+;ID                      Elevation       Demand Pattern                 
+ 1                                160             100 41                         ;
+ 2                                150             100 41                         ;
+ 3                                150             270 41                         ;
+ 4                                155             120 41                         ;
+ 5                                160             200 41                         ;
+ 6                                165             330 41                         ;
+
+[RESERVOIRS]
+;ID                                   Head                  Pattern
+ 7                                210                            ;
+
+[TANKS]
+;ID                              Elevation           Init Level            Min Level            Max Level             Diameter           Min Volume Volume Curve         Overflow            
+
+[PIPES]
+;ID                   Node1                Node2                              Length             Diameter            Roughness           Minor Loss               Status
+ 1                    2                    1                               1000             200             130               0                 Open   ;
+ 2                    1                    3                               1000             150             130               0                 Open   ;
+ 3                    2                    4                               1000             450             130               0                 Open   ;
+ 4                    4                    3                               1000             150             130               0                 Open   ;
+ 5                    5                    3                               1000             150             130               0                 Open   ;
+ 6                    4                    6                               1000             400             130               0                 Open   ;
+ 7                    6                    5                               1000             250             130               0                 Open   ;
+ 8                    7                    2                               1000             450             130               0                 Open   ;
+
+[PUMPS]
+;ID                   Node1                Node2                Properties          
+
+[VALVES]
+;ID                   Node1                Node2                            Diameter Type              Setting           Minor Loss
+
+[TAGS]
+;type      name       tag       
+
+[DEMANDS]
+;ID        Demand     Pattern   
+
+[STATUS]
+;ID        Setting   
+
+[PATTERNS]
+;ID        Multipliers
+
+41 0.995259 0.728001 0.635235 0.611548 0.556027 0.430952
+41 0.422802 0.326756 0.298142 0.356780 0.403457 0.437557
+41 0.522831 0.822996 1.231958 1.496302 1.743432 1.607697
+41 1.630054 1.479707 1.270231 1.463988 1.367426 1.139785
+41 1.249804 0.942073 1.002746 0.992268 1.091967 1.037784
+41 0.908367 0.901647 0.852060 0.832445 0.979125 1.061834
+41 1.181199 1.230193 1.172112 1.235548 1.218213 1.195272
+41 1.166911 1.455229 1.260247 1.236539 1.109799 1.130467
+41 0.812850 0.701857 0.567763 0.551582 0.484676 0.425366
+41 0.399324 0.338225 0.301197 0.354521 0.384776 0.393683
+41 0.479826 0.799405 1.141453 1.314993 1.617033 1.588494
+41 1.443501 1.602938 1.418343 1.413132 1.356869 1.202137
+41 1.175200 0.955668 1.024140 0.962305 0.947752 0.920581
+41 0.883176 0.884614 0.837082 0.995785 1.027940 0.955001
+41 1.198225 1.277938 1.284872 1.244788 1.216481 1.389260
+41 1.268552 1.398299 1.316245 1.344333 1.225658 1.125872
+41 0.900567 0.787110 0.604569 0.552070 0.556495 0.420775
+41 0.369508 0.348930 0.278884 0.388808 0.390073 0.384393
+41 0.557688 0.889609 1.334464 1.546680 1.517322 1.814278
+41 1.574272 1.634724 1.585253 1.395639 1.347898 1.258911
+41 1.124844 0.964055 1.017894 1.083404 0.958326 0.945142
+41 0.876502 0.979467 0.936304 0.967819 0.953805 1.086002
+41 1.055494 1.149607 1.154219 1.309445 1.344974 1.290266
+41 1.330889 1.217308 1.183682 1.303397 1.212000 1.121235
+41 0.995259
+
+[CURVES]
+;ID         X-Value      Y-Value     
+
+[CONTROLS]
+
+[RULES]
+
+[ENERGY]
+GLOBAL EFFICIENCY      75.0000
+GLOBAL PRICE           0.0000
+DEMAND CHARGE          0.0000
+
+[EMITTERS]
+;ID        Flow coefficient
+
+[QUALITY]
+
+[SOURCES]
+;Node      Type       Quality    Pattern   
+
+[REACTIONS]
+;Type           Pipe/Tank               Coefficient
+
+ ORDER BULK 1
+ ORDER TANK 1
+ ORDER WALL 1
+ GLOBAL BULK 0.0000    
+ GLOBAL WALL 0.0000    
+ LIMITING POTENTIAL 0.0000    
+ ROUGHNESS CORRELATION 0.0000    
+
+[MIXING]
+;Tank ID             Model Fraction
+
+[TIMES]
+DURATION             72:00:00
+HYDRAULIC TIMESTEP   00:30:00
+QUALITY TIMESTEP     00:05:00
+PATTERN TIMESTEP     00:30:00
+PATTERN START        00:00:00
+REPORT TIMESTEP      00:30:00
+REPORT START         00:00:00
+START CLOCKTIME      00:00:00 AM
+RULE TIMESTEP        00:06:00
+STATISTIC            NONE      
+
+[REPORT]
+ Status             	No
+ Summary            	No
+ Page               	0
+ Nodes					ALL
+ Links					ALL
+ Flow					Yes
+ Headloss				No
+ Velocity 				No
+ Demand 				Yes
+ Head 					Yes
+ Pressure 				Yes
+ Quality 				No
+ State 					Yes
+
+[OPTIONS]
+UNITS                CMH                 
+HEADLOSS             H-W                 
+SPECIFIC GRAVITY     1
+VISCOSITY            1
+TRIALS               40
+ACCURACY             0.001
+CHECKFREQ            2
+MAXCHECK             10
+UNBALANCED           CONTINUE 10
+DEMAND MULTIPLIER    1
+DEMAND MODEL         PDA
+MINIMUM PRESSURE     0.00
+REQUIRED PRESSURE    0.10
+PRESSURE EXPONENT    0.5
+EMITTER EXPONENT     0.5
+QUALITY              NONE                
+DIFFUSIVITY          1
+TOLERANCE            0.01
+
+[COORDINATES]
+;Node      X-Coord    Y-Coord   
+1                4000.000000000       7000.000000000
+2                5000.000000000       7000.000000000
+3                4000.000000000       6000.000000000
+4                5000.000000000       6000.000000000
+5                4000.000000000       5000.000000000
+6                5000.000000000       5000.000000000
+7                6000.000000000       7000.000000000
+
+[VERTICES]
+;Link      X-Coord    Y-Coord   
+
+[LABELS]
+
+[BACKDROP]
+DIMENSIONS    2900.000    4900.000    5100.000    7100.000
+UNITS    METERS
+OFFSET    0.00    0.00
+
+[END]

@@ -1,0 +1,161 @@
+; Filename: D:/OneDrive/IHE_HI/015. Thesis/Github_repositories\Msc-Thesis/INP_FILES/Twoloops_Base_WNTR.inp
+; WNTR: 0.3.1
+; Created: 2023-03-01 15:16:31
+[TITLE]
+
+[JUNCTIONS]
+;ID                      Elevation       Demand Pattern                 
+ 1                                160             100 2                          ;
+ 2                                150             100 2                          ;
+ 3                                150             270 2                          ;
+ 4                                155             120 2                          ;
+ 5                                160             200 2                          ;
+ 6                                165             330 2                          ;
+
+[RESERVOIRS]
+;ID                                   Head                  Pattern
+ 7                                210                            ;
+
+[TANKS]
+;ID                              Elevation           Init Level            Min Level            Max Level             Diameter           Min Volume Volume Curve         Overflow            
+
+[PIPES]
+;ID                   Node1                Node2                              Length             Diameter            Roughness           Minor Loss               Status
+ 1                    2                    1                               1000             200             130               0                 Open   ;
+ 2                    1                    3                               1000             150             130               0                 Open   ;
+ 3                    2                    4                               1000             450             130               0                 Open   ;
+ 4                    4                    3                               1000             150             130               0                 Open   ;
+ 5                    5                    3                               1000             150             130               0                 Open   ;
+ 6                    4                    6                               1000             400             130               0                 Open   ;
+ 7                    6                    5                               1000             250             130               0                 Open   ;
+ 8                    7                    2                               1000             450             130               0                 Open   ;
+
+[PUMPS]
+;ID                   Node1                Node2                Properties          
+
+[VALVES]
+;ID                   Node1                Node2                            Diameter Type              Setting           Minor Loss
+
+[TAGS]
+;type      name       tag       
+
+[DEMANDS]
+;ID        Demand     Pattern   
+
+[STATUS]
+;ID        Setting   
+[PATTERNS]
+;ID        Multipliers
+
+2 0.931753 0.716621 0.611745 0.563228 0.518676 0.448847
+2 0.407601 0.328753 0.299381 0.351061 0.401152 0.414147
+2 0.507610 0.819019 1.210653 1.476723 1.647811 1.621055
+2 1.610018 1.532990 1.423410 1.427156 1.322475 1.175198
+2 1.149935 1.002117 1.000915 0.999782 1.030656 0.981731
+2 0.902789 0.888311 0.884020 0.907297 0.993042 1.055255
+2 1.127066 1.175008 1.190704 1.250764 1.272738 1.269487
+2 1.255637 1.353574 1.286749 1.258791 1.169933 1.096877
+2 0.931753
+
+[CURVES]
+;ID         X-Value      Y-Value     
+
+[CONTROLS]
+
+[RULES]
+
+[ENERGY]
+GLOBAL EFFICIENCY      75.0000
+GLOBAL PRICE           0.0000
+DEMAND CHARGE          0.0000
+
+[EMITTERS]
+;ID        Flow coefficient
+
+[QUALITY]
+
+[SOURCES]
+;Node      Type       Quality    Pattern   
+
+[REACTIONS]
+;Type           Pipe/Tank               Coefficient
+
+ ORDER BULK 1
+ ORDER TANK 1
+ ORDER WALL 1
+ GLOBAL BULK 0.0000    
+ GLOBAL WALL 0.0000    
+ LIMITING POTENTIAL 0.0000    
+ ROUGHNESS CORRELATION 0.0000    
+
+[MIXING]
+;Tank ID             Model Fraction
+
+[TIMES]
+DURATION             24:00:00
+HYDRAULIC TIMESTEP   00:30:00
+QUALITY TIMESTEP     00:05:00
+PATTERN TIMESTEP     00:30:00
+PATTERN START        00:00:00
+REPORT TIMESTEP      00:30:00
+REPORT START         00:00:00
+START CLOCKTIME      00:00:00 AM
+RULE TIMESTEP        00:06:00
+STATISTIC            NONE      
+
+[REPORT]
+ Status             	No
+ Summary            	No
+ Page               	0
+ Nodes					ALL
+ Links					ALL
+ Flow					Yes
+ Headloss				No
+ Velocity 				No
+ Demand 				Yes
+ Head 					Yes
+ Pressure 				Yes
+ Quality 				No
+ State 					Yes
+
+[OPTIONS]
+UNITS                CMH                 
+HEADLOSS             H-W                 
+SPECIFIC GRAVITY     1
+VISCOSITY            1
+TRIALS               40
+ACCURACY             0.001
+CHECKFREQ            2
+MAXCHECK             10
+UNBALANCED           CONTINUE 10
+DEMAND MULTIPLIER    1
+DEMAND MODEL         PDA
+MINIMUM PRESSURE     0.00
+REQUIRED PRESSURE    0.10
+PRESSURE EXPONENT    0.5
+EMITTER EXPONENT     0.5
+QUALITY              NONE                
+DIFFUSIVITY          1
+TOLERANCE            0.01
+
+[COORDINATES]
+;Node      X-Coord    Y-Coord   
+1                4000.000000000       7000.000000000
+2                5000.000000000       7000.000000000
+3                4000.000000000       6000.000000000
+4                5000.000000000       6000.000000000
+5                4000.000000000       5000.000000000
+6                5000.000000000       5000.000000000
+7                6000.000000000       7000.000000000
+
+[VERTICES]
+;Link      X-Coord    Y-Coord   
+
+[LABELS]
+
+[BACKDROP]
+DIMENSIONS    2900.000    4900.000    5100.000    7100.000
+UNITS    METERS
+OFFSET    0.00    0.00
+
+[END]
